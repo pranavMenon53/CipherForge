@@ -11,3 +11,16 @@ keytool
 resources -
 
 - How SSL Certificate Works? - HTTPS Explained - https://www.youtube.com/watch?v=0yw-z6f7Mb4
+
+(All are basically the same with just different takes on the process)
+https://www.moserware.com/2009/06/first-few-milliseconds-of-https.html
+
+https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/
+
+https://www.comparitech.com/blog/information-security/tls-encryption/(Why TLS over SSL)
+
+https://www.youtube.com/watch?v=EnY6fSng3Ew&t=1s(ig main video)
+
+https://auth0.com/blog/the-tls-handshake-explained/
+
+https://olivierkonate.medium.com/openssl-ssl-tls-toolkit-basics-db390cca7187
