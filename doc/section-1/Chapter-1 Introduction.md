@@ -5,10 +5,10 @@
 
 # Basic networking terms to know
 ## HTTP
-1. **HTTP/1.1 (1997)** - Key Features:
-   - Text-based protocol: Easy to read and debug.
+### **HTTP/1.1 (1997)** - Key Features:
+   1. Text-based protocol: Easy to read and debug.
         - <img src="../images/sec-1/text-based-protocol.png" alt="text-based-protocol" style="border: 2px solid grey;">
-   - Persistent connections: Reuses TCP connections for multiple requests.
+   2. Persistent connections: Reuses TCP connections for multiple requests.
         - Introduced in HTTP/1.1, persistent connections allow multiple HTTP requests/responses to be sent over a single TCP connection without reopening it each time.
         - Benefits:
             - Reduces latency from connection setup.
@@ -17,8 +17,8 @@
         - Limitations:
             - Still suffers from HoL blocking.
             - Doesn’t support true multiplexing (unlike HTTP/2).
-   - Pipelining (optional): Allows multiple requests without waiting for responses, but rarely used due to head-of-line blocking.
-   - **Limitations:**
+   3. Pipelining (optional): Allows multiple requests without waiting for responses, but rarely used due to head-of-line blocking.
+   4. **Limitations:**
         - **Head-of-line blocking:** One slow response blocks others.
             - In HTTP/1.1, even though multiple requests can be sent over a single TCP connection (thanks to persistent connections), responses must be returned in order.
             - If one response is slow, it blocks all subsequent responses—even if those are ready.
@@ -32,33 +32,42 @@
                 - Resource-heavy: More connections mean more memory and CPU usage on both client and server.
                 - Congestion control inefficiency: Each connection manages congestion separately, which can lead to suboptimal throughput.
         - **No compression of headers:** Large headers slow down communication.
-2. **HTTP/2 (2015)** - Key Improvements:
-   - Binary protocol: More efficient and less error-prone than text.
+
+---
+### **HTTP/2 (2015)** - Key Improvements:
+   1. Binary protocol: More efficient and less error-prone than text.
         - <img src="../images/sec-1/binary-protocol.png" alt="binary-protocol" style="border: 2px solid grey;">
         - ![text-vs-binary](../images/sec-1/text-vs-binary.png)
-   - Multiplexing: Multiple requests/responses over a single TCP connection without blocking.
+   2. Multiplexing: Multiple requests/responses over a single TCP connection without blocking.
         - ![Multiplexing](../images/sec-1/multiplexing.png)
-   - Header compression (HPACK): Reduces overhead.
-   - Server push: Server can send resources proactively.
+   3. Header compression (HPACK): Reduces overhead.
+   4. Server push: Server can send resources proactively.
         - ![server-push](../images/sec-1/server-push.png)
-   - Stream prioritization: Allows clients to prioritize resources.
+   5. Stream prioritization: Allows clients to prioritize resources.
         - ![stream-prioritization](../images/sec-1/stream-prioritization.png)
-   - **Limitations:**
+   6. **Limitations:**
         - Still uses TCP, so suffers from head-of-line blocking at the transport layer (especially over lossy networks).
-3. **HTTP/3 (2022)** - Major Shift:
-    - Built on QUIC (Quick UDP Internet Connections), a transport protocol developed by Google.
-    - UDP-based: Avoids TCP’s head-of-line blocking.
-    - Faster connection setup: QUIC combines TLS and transport handshake.
-    - Improved performance on mobile and lossy networks.
-    - Connection migration: Seamless switching between networks (e.g., Wi-Fi to mobile data).
-    - **Benefits**:
-        - Lower latency.
-        - Better performance under poor network conditions.
-        - More secure and efficient.
-4. <img src="../images/sec-1/http-1-2-3.png" alt="HTTP-1 vs 2 vs 3" style="border: 2px solid grey;">
 
-## Internet protocol (IP)
-1. IPV4 and IPV6
+---
+### **HTTP/3 (2022)** - Major Shift:
+1. Built on QUIC (Quick UDP Internet Connections), a transport protocol developed by Google.
+2. UDP-based: Avoids TCP’s head-of-line blocking.
+3. Faster connection setup: QUIC combines TLS and transport handshake.
+4. Improved performance on mobile and lossy networks.
+5. Connection migration: Seamless switching between networks (e.g., Wi-Fi to mobile data).
+6. **Benefits**:
+     - Lower latency.
+     - Better performance under poor network conditions.
+     - More secure and efficient.
+7. <img src="../images/sec-1/http-1-2-3.png" alt="HTTP-1 vs 2 vs 3" style="border: 2px solid grey;">
+
+---
+
+## Internet Protocol (IP)
+- **IPv4** – 32-bit addressing, limited address space.  
+- **IPv6** – 128-bit addressing, larger address space, improved routing.
+
+---
 
 ## Wireshark
-1. This is a network analysis tool that helps you analyze the network traffic
+- A **network analysis tool** used to capture and inspect network traffic in detail.
