@@ -64,7 +64,7 @@
 ---
 
 ## Internet Protocol (IP)
-- **IPv4** – 32-bit addressing, limited address space.  
+- **IPv4** – 32-bit addressing, limited address space.
 - **IPv6** – 128-bit addressing, larger address space, improved routing.
 
 ---
