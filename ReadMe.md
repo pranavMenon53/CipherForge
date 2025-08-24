@@ -21,8 +21,17 @@ If you’ve ever wondered *what actually happens* when you see that 🔒 in your
 - **Real-World SSL Debugging** — with `openssl` and Wireshark
 
 ---
+# Getting started
 
-## 📂 Repo Structure
+1. Read the **Introduction to HTTPS** document ([here](./Introduction%20to%20SSL.docx)) to get started.
+    - It is a good introduction to how TLS provides security for communications on the network and how it achieves it.
+2. Once you read that, you can read the summary for TLS 1.2 using RSA ([here](./TLS-1.2-deep-dive.txt))
+    - This is a quick summary that walks over the steps involved in TLS 1.2 using RSA.
+---
+
+<!-- ## 📂 Repo Structure -->
 
 ## Courses
 1. https://www.udemy.com/course/tls-https/
+
+---
