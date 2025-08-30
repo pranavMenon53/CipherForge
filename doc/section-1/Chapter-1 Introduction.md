@@ -68,6 +68,11 @@
 - **IPv6** – 128-bit addressing, larger address space, improved routing.
 
 ---
-
+## TCP
+---
+## UDP
+---
+## QUIK
+---
 ## Wireshark
 - A **network analysis tool** used to capture and inspect network traffic in detail.
